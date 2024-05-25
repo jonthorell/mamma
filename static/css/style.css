@@ -11,7 +11,7 @@
     --cursive-font: 'Tangerine', serif;
 
     /* colors */
-    --background: #3f006a0f;
+    --background: #000;
     --blue: #0d6efd;
     --black: #000;
     --off-white: #f6f6f6;
@@ -28,29 +28,11 @@
 
 /* classes for background colors used on its own for styling and not part of another class */
 
-.background {
-    /* used for table-bg */
-    background-color: var(--background);
-}
-
-.comment-bg {
-    /* used for background of comments */
-    background-color: var(--blue);
-}
-
-.grey {
-    /* used for the links-table background */
-    background-color: var(--grey);
-}
-
-.blackfg {
-    /* black fg-color. Used by categories cards */
-    color: var(--black);
-}
 
 html, body {
     /* use the entire height */
     height: 100%;
+    background-color: black;
 }
 
 body {
@@ -62,230 +44,18 @@ body {
 
 h1,h2,h3,h4,h5,h6 {
     /* all headers should use the title-font 
-        and be white unless overridden
+        and be red unless overridden
     */
     font-family: var(--title);
-    color: var(--white);
+    color: var(--red);
 }
 
 p {
-    /* all paragraphs should be white */
-    color: var(--white);
+    /* all paragraphs should be red */
+    color: var(--red);
 }
 
-.last_articles {
-    /* the heading for the three articles on landing page should be off-white */
-    color: var(--off-white);
-}
-
-.jumbotron-paragraph {
-    /* used for the intro-text in top jumbotron on landing page */
-    color: var(--black);
-}
-
-.jumbotron-image {
-    /* scales the computer images on the first page */
-    max-width: 100%;
-    height: 240px;
-    object-position: center;
-    object-fit: cover;
-}
-
-h1 {
-    /* all h1 should be orange*/
-    color: var(--orange);
-}
-
-
-main {
-    /* appply to the main section. I.e. the part of the page that is not a part of base.html 
-        Background should always be grey
-    */
-    flex: 1 0 auto;
-    background-color: var(--grey);
-}
-
-#disclaimer-bar {
-    /* the bar at the top should be red to stick out */
-    background-color: var(--red);
-}
-
-.cursive-font {
-    /* used when you want a cursive font. Landing page */
-    font-family: var(--cursive-font);
-}
-
-fieldset label {
-    /* sets the label for fieldsets to white */
-    color: var(--white);
-}
-
-.right-align {
-    /* aligns something to the right */
-    float: right;
-}
-
-.not-logged-in {
-    /* text that says you need to be logged in should be in black */
-    color: var(--black);
-}
-
-.body-error {
-    /* used to style the background for error pages like 404 */
-    background-color: var(--black);
-}
-
-.form {
-    /* styles the different forms */
-    width: 100%;
-    margin: 3% auto;
-    box-shadow: var(--small-box-shadow);
-    border-radius: 5px;
-}
-
-.categories {
-    /* used for the right-hand menu in categories*/
-    text-decoration: none;
-}
-
-.td-desc {
-    /* used for description column in table on credits page*/
-    color: var(--white);
-}
-
-.struck-out {
-    /* used for line-throgh on disabled accounts */
-    text-decoration: line-through;
-}
-
-.title-edit-article {
-    /* for name of article in edit-mode */
-    color: var(--orange);
+.center {
     text-align: center;
-}
-
-#select-wrapper-contact-subject {
-    /* This is only used to style the subject drop-down menu in the contact form so it is styled the same way as the rest of the fields
-        Apparently the mdb-js that adds the clear-button to it does something to change the color. It was easiest to override it this
-        way.
-    */
-    background-color: var(--off-white);
-}
-
-/* footer */
-
-footer {
-    /* sets the background color of the footer to off-white
-        and arranges the content
-    */
-    flex-shrink: 0;
-    background-color: var(--off-white);
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    align-items: center;
-}
-
-#copyright {
-    /* sets the background of the copyright information to off-white and
-        makes sure it is in the left corner
-    */
-    flex-shrink: 1;
-    background-color: var(--off-white);
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-}
-
-.social-icon {
-    /* scales the social icons and sets margins around them */
-    height: 2rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-/* This sectionis for django-admin */
-
-.admin-grey {
-    /* used for bg color on django-admin-login*/
-    background-color: var(--grey);
-}
-
-.admin-bg-card {
-    /* used for django-admin-login*/
-    background-image: url("https://res.cloudinary.com/retroloversunited/image/upload/v1686733588/static/images/backdrop.89bfed3dd490.png");
-    background-color: var(--grey);
-}
-
-/* This section targets elements in articles created by summernote */
-
-.article-container .p-3 blockquote {
-    /* used for blockquotes in articles */
-    color: var(--off-white);
-    font-style: italic;
-}
-
-.article-container .p-3 td {
-    /* used for td in tables in articles */
-    color: var(--white);
-}
-
-.article-container .p-3 li {
-    /* used for li in articles */
-    color: var(--white);
-}
-
-/* links 
-   target-link first is to make sure the links in the navbar are not affected
-    categories first is to make sure navlinks in the categories cards (all categories)
-    are never shown as links since the card itself is the link.
-*/
-
-/* unvisited link */
-.target-link a:link {
-    color: var(--black);
-    text-decoration: underline;
-}
-
-/* visited link */
-.target-link a:visited {
-    color: var(--black);
-    text-decoration: underline;
-}
-
-/* mouse over link */
-.target-link a:hover {
-    color: hotpink;
-    text-decoration: underline;
-}
-
-/* selected link */
-.target-link a:active {
-    color: var(--black);
-    text-decoration: underline;
-}
-
-/* unvisited link */
-.categories a:link {
-    color: var(--black);
-    text-decoration: none;
-}
-
-/* visited link */
-.categories a:visited {
-    color: var(--black);
-    text-decoration: none;
-}
-
-/* mouse over link */
-.categories a:hover {
-    color: hotpink;
-    text-decoration: none;
-}
-
-/* selected link */
-.categories a:active {
-    color: var(--black);
-    text-decoration: none;
+    padding: 10px;
 }
