@@ -7,3 +7,8 @@ class index(TemplateView):
     '''Class used to display the index page '''
 
     template_name = 'core/index.html'
+    
+class grief(TemplateView):
+    '''Class used to display the grief page '''
+
+    template_name = 'core/grief.html'
