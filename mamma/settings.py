@@ -37,7 +37,7 @@ DEBUG = 'DEVELOPMENT' in os.environ
 #DEBUG = True
 
 X_FRAME_OPTIONS = "SAMEORIGIN"
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mamma-f53c114cd2de.herokuapp.com','localhost','127.0.0.1']
 
 
 # Application definition
