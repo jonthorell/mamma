@@ -42,6 +42,24 @@ body {
     font-family: var(--main-font);
 }
 
+main {
+    /* appply to the main section. I.e. the part of the page that is not a part of base.html 
+        Background should always be black
+        Text should always be white
+    */
+    flex: 1 0 auto;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.core-divs {
+    /* makes the main divs slightly opaque and rounded, and sets the main text color */
+    /*background-color: var(--grey2);*/
+    border-radius: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 h1,h2,h3,h4,h5,h6 {
     /* all headers should use the title-font 
         and be red unless overridden
