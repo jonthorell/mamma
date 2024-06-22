@@ -5,27 +5,33 @@
 <html lang="en">
 
 <head>
-
+    {% block meta %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta name="description" content="Minnessida för Lisbeth Thorell">
     <meta name="keywords" content="memorial">
     <meta name="author" content="Jonas Thorell">
-    {% block extra_css %}
+    {% endblock %}
 
+    {% block extra_meta %}
+    {% endblock %}
+
+    {% block extra_css %}
     <!-- font awsome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- materialize bootstrp -->
     <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}" type="text/css">
     {% endblock %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
 
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
     <link rel='shortcut icon' type='image/x-icon' href="{% static 'icons/favicon.ico' %}">
 
 
+    {% comment %}
     <!-- default title. Will be overwritten by specific pages -->
-    <title>Mammas minnessida</title>
+    {% endcomment %}
+    <title>Mammas minnessida: {% block title %}Default Title{% endblock %}</title>
     {% block extra_head %}
     {% endblock %}
 
