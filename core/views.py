@@ -12,3 +12,8 @@ class grief(TemplateView):
     '''Class used to display the grief page '''
 
     template_name = 'core/grief.html'
+    
+class gone(TemplateView):
+    '''Class used to display the gone page '''
+
+    template_name = 'core/gone.html'
