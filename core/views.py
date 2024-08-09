@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
+from django.contrib import messages
+from django.http import HttpResponse
 
 # Create your views here.
 
@@ -17,3 +19,4 @@ class gone(TemplateView):
     '''Class used to display the gone page '''
 
     template_name = 'core/gone.html'
+    
