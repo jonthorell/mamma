@@ -1,1 +1,2 @@
-web: gunicorn mamma.wsgi
+web: gunicorn mamma.wsgi.application
+#test
